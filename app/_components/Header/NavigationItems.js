@@ -12,7 +12,7 @@ function NavigationItems({ isOpen, toggleMenu }) {
         <li
           key={item.path}
           onClick={toggleMenu}
-          className={`uppercase hover:text-primary-300 font-bold tracking-wider py-4 md:py-0${
+          className={`uppercase hover:text-primary-300 font-bold tracking-wider py-4 md:py-0 ${
             router === item.path ? 'text-primary-300 ' : ''
           } ${index !== menuItems.length - 1 ? 'pr-6' : ''}`}
         >
