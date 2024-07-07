@@ -1,6 +1,6 @@
 function Page() {
   return (
-    <body>
+    <div>
       Home Headphones Speakers Earphones Headphones New product XX99 Mark II
       Headphones The new XX99 Mark II headphones is the pinnacle of pristine
       audio. It redefines your premium headphone experience by reproducing the
@@ -23,7 +23,7 @@ function Page() {
       sound specialists who are devoted to helping you get the most out of
       personal audio. Come and visit our demo facility - we’re open 7 days a
       week. Copyright 2021. All Rights Reserved
-    </body>
+    </div>
   );
 }
 
