@@ -1,6 +1,6 @@
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import Headers from './_components/Headers';
+import Headers from './_components/Header/Headers';
 
 const manrope = Manrope({
   subsets: ['latin'],
