@@ -1,16 +1,21 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import menuItems from '../_data/menuItems';
 
 function Navigation() {
+  const router = usePathname();
+
   return (
     <nav>
       <ul className="flex flex-row">
         {menuItems.map((item, index) => (
           <li
             key={item.path}
-            className={`uppercase font-bold hover:text-primary-300 ${
-              index !== menuItems.length - 1 ? 'pr-6' : ''
-            }`}
+            className={`uppercase hover:text-primary-300 font-bold tracking-wider ${
+              router === item.path ? 'text-primary-300 ' : ''
+            } ${index !== menuItems.length - 1 ? 'pr-6' : ''}`}
           >
             <Link href={item.path}>
               <p>{item.name}</p>
