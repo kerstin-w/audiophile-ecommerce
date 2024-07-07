@@ -23,7 +23,7 @@ function Headers() {
         <NavigationDesktop />
         <NavCart />
       </div>
-      <NavigationMobile isOpen={isOpen} />
+      <NavigationMobile isOpen={isOpen} toggleMenu={toggleMenu} />
     </header>
   );
 }

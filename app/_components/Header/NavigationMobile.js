@@ -1,6 +1,6 @@
 import NavigationItems from './NavigationItems';
 
-function NavigationMobile({ isOpen }) {
+function NavigationMobile({ isOpen, toggleMenu }) {
   return (
     <nav
       className={`fixed left-0 w-full h-screen bg-black backdrop-blur-sm  bg-opacity-75 transition-transform transform ${
@@ -13,7 +13,7 @@ function NavigationMobile({ isOpen }) {
         } md:hidden`}
       >
         <ul className="flex flex-col">
-          <NavigationItems />
+          <NavigationItems isOpen={isOpen} toggleMenu={toggleMenu} />
         </ul>
       </div>
     </nav>
