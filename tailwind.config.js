@@ -6,6 +6,9 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    letterSpacing: {
+      widest: '10px',
+    },
     extend: {
       colors: {
         primary: {
