@@ -3,7 +3,7 @@ import NavigationItems from './NavigationItems';
 function NavigationMobile({ isOpen, toggleMenu }) {
   return (
     <nav
-      className={`fixed left-0 w-full h-screen bg-black backdrop-blur-sm  bg-opacity-75 transition-transform transform ${
+      className={`fixed z-40 left-0 w-full h-screen bg-black backdrop-blur-sm  bg-opacity-75 transition-transform transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full md:hidden'
       } md:hidden`}
     >
