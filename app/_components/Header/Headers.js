@@ -14,7 +14,7 @@ function Headers() {
   };
 
   return (
-    <header className="bg-black text-white">
+    <header className="bg-primary-200 text-white">
       <div className="xl:mx-36 md:mx-24 md:my-12 px-6 py-6 md:px-0 flex justify-between border-b border-primary-100 pb-8">
         <div className="md:hidden flex items-end mr-5">
           <Hamburger toggleMenu={toggleMenu} isOpen={isOpen} />

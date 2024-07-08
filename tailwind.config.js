@@ -11,7 +11,7 @@ module.exports = {
         primary: {
           50: '#FAFAFA',
           100: '#F1F1F1',
-          200: '#101010',
+          200: '#191919;',
           300: '#D87D4A',
         },
         accent: {

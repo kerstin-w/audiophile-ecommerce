@@ -8,7 +8,7 @@ function NavigationMobile({ isOpen, toggleMenu }) {
       } md:hidden`}
     >
       <div
-        className={`fixed left-0 w-min z-40 h-screen bg-black transition-transform transform py-6 pl-6 pr-12 ${
+        className={`fixed left-0 w-min z-40 h-screen bg-primary-200 transition-transform transform py-6 pl-6 pr-12 ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:hidden'
         } md:hidden`}
       >
