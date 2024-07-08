@@ -41,6 +41,13 @@
     background-position: -115px -105px;
   }
 
+  .bgZX7 {
+    background-image: url('/home/desktop/image-speaker-zx7.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   @media (max-width: 768px) {
     .heroBanner {
       background-image: url('/home/tablet/image-header.jpg');
