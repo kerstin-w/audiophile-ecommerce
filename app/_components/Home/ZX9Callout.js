@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import CtaBlack from './CtaBlack';
+import CtaBlack from '../CtaBlack';
 
 function ZX9Callout() {
   return (

@@ -1,4 +1,4 @@
-import CtaTransparent from './CtaTransparent';
+import CtaTransparent from '../CtaTransparent';
 
 function ZX7Callout() {
   return (
