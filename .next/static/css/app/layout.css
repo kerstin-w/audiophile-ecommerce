@@ -647,6 +647,9 @@ video {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .block {
   display: block;
 }
@@ -659,29 +662,32 @@ video {
 .h-6 {
   height: 1.5rem;
 }
+.h-\[250px\] {
+  height: 250px;
+}
+.h-fit {
+  height: fit-content;
+}
 .h-full {
   height: 100%;
 }
 .h-screen {
   height: 100vh;
 }
-.min-h-screen {
-  min-height: 100vh;
+.h-\[350px\] {
+  height: 350px;
 }
-.min-h-\[value\] {
-  min-height: value;
+.h-\[450px\] {
+  height: 450px;
 }
-.min-h-14 {
-  min-height: 3.5rem;
-}
-.min-h-40 {
-  min-height: 10rem;
-}
-.min-h-48 {
-  min-height: 12rem;
+.h-\[320px\] {
+  height: 320px;
 }
 .min-h-56 {
   min-height: 14rem;
+}
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-4\/5 {
   width: 80%;
@@ -703,12 +709,6 @@ video {
 }
 .max-w-\[180px\] {
   max-width: 180px;
-}
-.flex-1 {
-  flex: 1 1 0%;
-}
-.flex-grow {
-  flex-grow: 1;
 }
 .-translate-x-full {
   --tw-translate-x: -100%;
@@ -734,6 +734,9 @@ video {
 }
 .flex-col {
   flex-direction: column;
+}
+.flex-col-reverse {
+  flex-direction: column-reverse;
 }
 .items-end {
   align-items: flex-end;
@@ -802,6 +805,9 @@ video {
 }
 .object-contain {
   object-fit: contain;
+}
+.object-cover {
+  object-fit: cover;
 }
 .px-16 {
   padding-left: 4rem;
@@ -881,6 +887,9 @@ video {
 .text-\[15px\] {
   font-size: 15px;
 }
+.text-\[40px\] {
+  font-size: 40px;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -919,8 +928,14 @@ video {
 .leading-\[25px\] {
   line-height: 25px;
 }
+.leading-\[44px\] {
+  line-height: 44px;
+}
 .leading-tight {
   line-height: 1.25;
+}
+.tracking-\[1\.42857px\] {
+  letter-spacing: 1.42857px;
 }
 .tracking-\[1px\] {
   letter-spacing: 1px;
@@ -1139,6 +1154,26 @@ video {
     margin-left: 120px;
   }
 
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .lg\:h-\[600px\] {
+    height: 600px;
+  }
+
+  .lg\:max-h-96 {
+    max-height: 24rem;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:w-\[180px\] {
     width: 180px;
   }
@@ -1169,6 +1204,12 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .lg\:px-28 {
