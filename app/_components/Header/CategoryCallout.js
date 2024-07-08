@@ -7,7 +7,10 @@ function CategoryCallout() {
   return (
     <div className="flex flex-col md:flex-row xl:mx-36 md:mx-24 mx-12 md:space-x-4 lg:space-x-8 my-[60px] md:my-[120px]">
       {categories.map((category) => (
-        <div className="flex flex-col items-center bg-primary-100 rounded-lg relative mt-14 w-full shadow-lg">
+        <div
+          key={category.name}
+          className="flex flex-col items-center bg-primary-100 rounded-lg relative mt-14 w-full shadow-lg"
+        >
           <div className="w-[150px] lg:w-[180px] overflow-hidden absolute transform -translate-y-12 lg:-translate-y-16">
             <Image
               src={category.imageSrc}
@@ -31,7 +34,7 @@ function CategoryCallout() {
               <path
                 d="M1.322 1l5 5-5 5"
                 stroke="#D87D4A"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
                 fillRule="evenodd"
               />
