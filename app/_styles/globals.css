@@ -48,6 +48,13 @@
     background-size: cover;
   }
 
+  .bgYX1 {
+    background-image: url('/home/desktop/image-earphones-yx1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   @media (max-width: 768px) {
     .heroBanner {
       background-image: url('/home/tablet/image-header.jpg');
