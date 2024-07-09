@@ -46,7 +46,7 @@ function CLP({ category }) {
               <p className="font-medium text-base leading-6 text-black opacity-50 mb-4">
                 {product.description}
               </p>
-              <Cta path={`/headphones/${product.slug}`}>See Product</Cta>
+              <Cta path={`/products/${product.slug}`}>See Product</Cta>
             </div>
           </div>
         ))}
