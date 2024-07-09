@@ -14,7 +14,7 @@ function CLP({ category }) {
           } items-center md:mb-24 mb-14 `}
         >
           <div
-            className={`w-full md:w-1/2 h-44 md:h-auto mb-8 md:mb-0 flex justify-center bg-primary-100 ${
+            className={`w-full md:w-1/2 h-44 md:h-auto mb-8 md:mb-0 flex justify-center bg-primary-100 rounded-lg ${
               index % 2 === 0 ? '' : 'md:pl-8'
             }`}
           >
