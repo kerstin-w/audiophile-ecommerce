@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 function AudiogearCallout() {
   return (
-    <div className="xl:mx-36 md:mx-24 mx-12 flex lg:flex-row flex-col-reverse lg:space-x-8 lg:space-y-0 space-y-8 my-[60px] md:my-[120px] md:justify-between items-center h-fit">
+    <div className="flex lg:flex-row flex-col-reverse lg:space-x-8 lg:space-y-0 space-y-8 my-[60px] md:my-[120px] md:justify-between items-center h-fit">
       <div className=" lg:w-1/2 px-16 py-20 flex flex-col lg:text-left text-center">
         <h2 className="font-bold text-[40px] leading-[44px] tracking-[1.42857px] uppercase text-black mb-10">
           Bringing you the <span className="text-primary-300">best</span> audio

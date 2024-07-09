@@ -9,11 +9,13 @@ export default function Page() {
   return (
     <>
       <HeroBanner />
-      <CategoryCallout />
-      <ZX9Callout />
-      <ZX7Callout />
-      <YX1Callout />
-      <AudiogearCallout />
+      <div className="xl:mx-36 md:mx-24 mx-12">
+        <CategoryCallout />
+        <ZX9Callout />
+        <ZX7Callout />
+        <YX1Callout />
+        <AudiogearCallout />
+      </div>
     </>
   );
 }

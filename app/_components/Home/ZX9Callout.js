@@ -3,7 +3,7 @@ import CtaBlack from '../CtaBlack';
 
 function ZX9Callout() {
   return (
-    <div className="bgCircle bg-primary-300 rounded-xl flex flex-col lg:flex-row items-center text-center text-white lg:text-left py-[55px] lg:py-[20px] overflow-hidden xl:mx-36 md:mx-24 mx-12 shadow-lg">
+    <div className="bgCircle bg-primary-300 rounded-xl flex flex-col lg:flex-row items-center text-center text-white lg:text-left py-[55px] lg:py-[20px] overflow-hidden shadow-lg">
       <div className="max-w-[180px] md:max-w-[197px] lg:max-w-[390px] lg:ml-[120px] mb-8 md:mb-16 transform lg:translate-y-24">
         <Image
           src="/home/desktop/ZX9.png"

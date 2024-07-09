@@ -5,7 +5,7 @@ import categories from '@/app/_data/categories';
 
 function CategoryCallout() {
   return (
-    <div className="flex flex-col md:flex-row xl:mx-36 md:mx-24 mx-12 md:space-x-4 lg:space-x-8 my-[60px] md:my-[120px]">
+    <div className="flex flex-col md:flex-row md:space-x-4 lg:space-x-8 my-[60px] md:my-[120px]">
       {categories.map((category) => (
         <div
           key={category.name}
