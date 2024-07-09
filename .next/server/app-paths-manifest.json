@@ -1,4 +1,6 @@
 {
+  "/earphones/page": "app/earphones/page.js",
+  "/speakers/page": "app/speakers/page.js",
   "/headphones/page": "app/headphones/page.js",
   "/page": "app/page.js"
 }
