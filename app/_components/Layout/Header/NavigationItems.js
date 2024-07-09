@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import menuItems from '../../_data/menuItems';
+import menuItems from '../../../_data/menuItems';
 
 function NavigationItems({ isOpen, toggleMenu }) {
   const router = usePathname();

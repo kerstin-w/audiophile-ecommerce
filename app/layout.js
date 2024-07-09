@@ -1,6 +1,7 @@
 import { Manrope } from 'next/font/google';
 import '@/app/_styles/globals.css';
-import Headers from './_components/Header/Headers';
+import Headers from './_components/Layout/Header/Headers';
+import Footer from './_components/Layout/Footer/Footer';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
       >
         <Headers />
         {children}
+        <Footer />
       </body>
     </html>
   );
