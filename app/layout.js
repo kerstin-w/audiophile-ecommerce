@@ -2,6 +2,7 @@ import { Manrope } from 'next/font/google';
 import '@/app/_styles/globals.css';
 import Headers from './_components/Layout/Header/Headers';
 import Footer from './_components/Layout/Footer/Footer';
+import { ShoppingCartProvider } from './_context/ShoppingCartContext';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -20,9 +21,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${manrope.className} antialiased bg-primary-50 text-black min-h-screen flex flex-col relative`}
       >
-        <Headers />
-        {children}
-        <Footer />
+        {' '}
+        <ShoppingCartProvider>
+          <Headers />
+          {children}
+          <Footer />
+        </ShoppingCartProvider>
       </body>
     </html>
   );
