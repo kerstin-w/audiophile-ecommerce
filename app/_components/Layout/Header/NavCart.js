@@ -1,10 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import cart from '@/public/shared/desktop/icon-cart.svg';
+import { useShoppingCart } from '@/app/_context/ShoppingCartContext';
 
-function NavCart() {
+function NavCart({ setIsModalOpen }) {
+  const { getTotalQuantity } = useShoppingCart();
+  const totalQuantity = getTotalQuantity();
   return (
-    <Link href="/">
+    <button onClick={() => setIsModalOpen(true)} className="relative">
       <Image
         src={cart}
         height="20"
@@ -12,7 +14,12 @@ function NavCart() {
         quality={90}
         alt="Icon shopping cart"
       />
-    </Link>
+      {totalQuantity > 0 && (
+        <span className="absolute top-0 left-4 bg-primary-300 text-white rounded-full px-1 text-xs">
+          {totalQuantity}
+        </span>
+      )}
+    </button>
   );
 }
 
