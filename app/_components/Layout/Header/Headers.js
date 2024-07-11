@@ -5,9 +5,11 @@ import NavCart from './NavCart';
 import NavigationDesktop from './NavigationDesktop';
 import NavigationMobile from './NavigationMobile';
 import Hamburger from './Hamburger';
+import Cart from '../../Cart';
 
 function Headers() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -21,9 +23,11 @@ function Headers() {
         </div>
         <Logo />
         <NavigationDesktop />
-        <NavCart />
+        <NavCart setIsModalOpen={setIsModalOpen} />
       </div>
       <NavigationMobile isOpen={isOpen} toggleMenu={toggleMenu} />
+
+      <Cart isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }
