@@ -1,13 +1,17 @@
 import { notFound } from 'next/navigation';
 import { supabase } from './supabase';
 
-export async function getProduct(slug) {
-  const { data: product } = await supabase
-    .from('products')
-    .select('*')
-    .eq('slug', slug)
-    .single();
+export async function getProduct(identifier) {
+  let query;
+  if (typeof identifier === 'number') {
+    query = supabase.from('products').select('*').eq('id', identifier).single();
+  } else if (typeof identifier === 'string') {
+    query = supabase.from('products').select('*').eq('slug', identifier).single();
+  } else {
+    throw new Error('Invalid identifier type');
+  }
 
+  const { data: product } = await query;
   return product;
 }
 
