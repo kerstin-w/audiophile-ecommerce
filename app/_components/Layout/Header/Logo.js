@@ -7,10 +7,10 @@ function Logo() {
     <Link href="/">
       <Image
         src={logo}
-        height="25"
-        width="143"
+        height={25}
+        width={143}
         quality={90}
-        alt="audiphile Logo"
+        alt="audiophile Logo"
       />
     </Link>
   );
