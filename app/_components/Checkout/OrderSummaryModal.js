@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { getProduct } from '@/app/_lib/data-service';
 import Cta from '../Cta';
 
