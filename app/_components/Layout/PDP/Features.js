@@ -14,7 +14,7 @@ function Features({ product }) {
           situation. Whether you're taking a business call or just in your own
           personal space, the auto on/off and pause features ensure that you'll
           never miss a beat.
-          <p>&nbsp;</p>
+          <span>&nbsp;</span>
           The advanced Active Noise Cancellation with built-in equalizer allow
           you to experience your audio world on your terms. It lets you enjoy
           your audio in peace, but quickly interact with your surroundings when
