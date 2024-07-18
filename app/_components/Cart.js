@@ -13,6 +13,7 @@ function Cart({ isOpen, onClose }) {
   } = useShoppingCart();
 
   const modalRef = useClickOutside(() => onClose(false));
+  const totalQuantity = getTotalQuantity();
 
   const handleQuantityChange = (id, quantity) => {
     if (quantity < 1) return;
@@ -28,7 +29,7 @@ function Cart({ isOpen, onClose }) {
       >
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-xl font-bold">CART ({getTotalQuantity()})</h2>
-          {updateItemQuantity > 0 && (
+          {totalQuantity > 0 && (
             <button
               onClick={clearCartItems}
               className="text-primary-300 hover:underline"
@@ -37,7 +38,7 @@ function Cart({ isOpen, onClose }) {
             </button>
           )}
         </div>
-        {updateItemQuantity > 0 ? (
+        {totalQuantity > 0 ? (
           <div>
             <ul>
               {cart.map((item) => {
