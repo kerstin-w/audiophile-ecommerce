@@ -7,7 +7,7 @@ import NavigationMobile from './NavigationMobile';
 import Hamburger from './Hamburger';
 import Cart from '../../Cart';
 
-function Headers() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -32,4 +32,4 @@ function Headers() {
   );
 }
 
-export default Headers;
+export default Header;

@@ -1,6 +1,6 @@
 import { Manrope } from 'next/font/google';
 import '@/app/_styles/globals.css';
-import Headers from './_components/Layout/Header/Headers';
+import Header from './_components/Layout/Header/Header';
 import Footer from './_components/Layout/Footer/Footer';
 import { ShoppingCartProvider } from './_context/ShoppingCartContext';
 
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       >
         {' '}
         <ShoppingCartProvider>
-          <Headers />
+          <Header />
           {children}
           <Footer />
         </ShoppingCartProvider>
