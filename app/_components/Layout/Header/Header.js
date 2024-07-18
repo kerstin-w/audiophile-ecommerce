@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Logo from './Logo';
 import NavCart from './NavCart';
 import NavigationDesktop from './NavigationDesktop';
@@ -11,9 +11,13 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prevState) => !prevState);
+  }, []);
+
+  const closeModal = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
 
   return (
     <header className="bg-primary-200 text-white">
@@ -26,8 +30,7 @@ function Header() {
         <NavCart setIsModalOpen={setIsModalOpen} />
       </div>
       <NavigationMobile isOpen={isOpen} toggleMenu={toggleMenu} />
-
-      <Cart isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <Cart isOpen={isModalOpen} onClose={closeModal} />
     </header>
   );
 }
