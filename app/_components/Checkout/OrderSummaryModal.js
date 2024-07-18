@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getProduct } from '@/app/_lib/data-service';
+import Cta from '../Cta';
 
 export default async function OrderSummaryModal({ order, orderItems }) {
   const firstProduct = orderItems[0];
@@ -31,7 +32,7 @@ export default async function OrderSummaryModal({ order, orderItems }) {
             You will receive an email confirmation shortly.
           </p>
         </div>
-        <div className="flex flex-row w-full mt-10">
+        <div className="flex flex-row w-full mt-10 mb-10">
           <div className="bg-gray-100 p-5 rounded-s-lg w-2/3">
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center">
@@ -80,9 +81,9 @@ export default async function OrderSummaryModal({ order, orderItems }) {
             </p>
           </div>
         </div>
-        <button className="inset-0 bg-primary-300 text-white transform uppercase font-bold text-[13px] leading-[18px] tracking-[1px] transition-colors duration-300 hover:bg-accent-300 w-full px-7 py-4 mt-10">
-          <Link href="/">Back To Home</Link>
-        </button>
+        <Cta path="/" fullWidth>
+          Back To Home
+        </Cta>
       </div>
     </div>
   );
