@@ -1,26 +1,35 @@
 'use client';
 
+import { useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import menuItems from '../../../_data/menuItems';
 
-function NavigationItems({ isOpen, toggleMenu }) {
-  const router = usePathname();
+function NavigationItems({ toggleMenu }) {
+  const pathname = usePathname();
+
+  const getClassNames = (itemPath, isLast) =>
+    `uppercase hover:text-primary-300 font-bold tracking-wider py-4 md:py-0 ${
+      pathname === itemPath ? 'text-primary-300 ' : ''
+    } ${!isLast ? 'pr-6' : ''}`;
+
   return (
     <>
-      {menuItems.map((item, index) => (
-        <li
-          key={item.path}
-          onClick={toggleMenu}
-          className={`uppercase hover:text-primary-300 font-bold tracking-wider py-4 md:py-0 ${
-            router === item.path ? 'text-primary-300 ' : ''
-          } ${index !== menuItems.length - 1 ? 'pr-6' : ''}`}
-        >
-          <Link href={item.path}>
-            <p>{item.name}</p>
-          </Link>
-        </li>
-      ))}
+      {menuItems.map((item, index) => {
+        const isLast = index === menuItems.length - 1;
+        const classNames = useMemo(
+          () => getClassNames(item.path, isLast),
+          [pathname, isLast, item.path]
+        );
+
+        return (
+          <li key={item.path} onClick={toggleMenu} className={classNames}>
+            <Link href={item.path}>
+              <p>{item.name}</p>
+            </Link>
+          </li>
+        );
+      })}
     </>
   );
 }

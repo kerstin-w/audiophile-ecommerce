@@ -13,7 +13,7 @@ function NavigationMobile({ isOpen, toggleMenu }) {
         } md:hidden`}
       >
         <ul className="flex flex-col">
-          <NavigationItems isOpen={isOpen} toggleMenu={toggleMenu} />
+          <NavigationItems toggleMenu={toggleMenu} />
         </ul>
       </div>
     </nav>
