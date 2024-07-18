@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useShoppingCart } from '../_context/ShoppingCartContext';
 import { useClickOutside } from '../_lib/hooks/useClickOutside';
 import Link from 'next/link';
+import Cta from './Cta';
 
 function Cart({ isOpen, onClose }) {
   const {
@@ -18,6 +19,10 @@ function Cart({ isOpen, onClose }) {
   const handleQuantityChange = (id, quantity) => {
     if (quantity < 1) return;
     updateItemQuantity(id, quantity);
+  };
+
+  const handleCheckout = () => {
+    onClose(false);
   };
 
   if (!isOpen) return null;
@@ -95,7 +100,10 @@ function Cart({ isOpen, onClose }) {
               <p className="text-gray-500">TOTAL</p>
               <p className="font-bold">$ {getCartTotal().toLocaleString()}</p>
             </div>
-            <button className="inset-0 bg-primary-300 text-white transform uppercase font-bold text-[13px] leading-[18px] tracking-[1px] transition-colors duration-300 hover:bg-accent-300 w-full px-7 py-3">
+            <button
+              className="inset-0 bg-primary-300 text-white transform uppercase font-bold text-[13px] leading-[18px] tracking-[1px] transition-colors duration-300 hover:bg-accent-300 w-full px-7 py-3"
+              onClick={handleCheckout}
+            >
               <Link href="/checkout">
                 <p>Checkout</p>
               </Link>
