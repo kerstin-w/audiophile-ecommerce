@@ -11,7 +11,7 @@ function Recommendations({ product }) {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4">
         {featured.map((product) => (
-          <div key={product.images}>
+          <div key={product.name}>
             <div className="w-full h-64 relative">
               <Image
                 src={product.images.desktop}
