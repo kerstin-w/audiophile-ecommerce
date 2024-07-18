@@ -4,6 +4,7 @@ import { useState } from 'react';
 import BackButton from '../_components/BackButton';
 import Summary from '../_components/Checkout/Summary';
 import OrderSummaryModal from '../_components/Checkout/OrderSummaryModal';
+import Cta from '../_components/Cta';
 import { useShoppingCart } from '../_context/ShoppingCartContext';
 import { createOrder } from '../_lib/cartStorage';
 
@@ -12,7 +13,7 @@ export default function Page() {
   const [orderSummary, setOrderSummary] = useState(null);
   const [orderItemsSummary, setOrderItemsSummary] = useState([]);
 
-  const { getCartTotal } = useShoppingCart();
+  const { getCartTotal, cart } = useShoppingCart();
   const createOrderWithData = async (formData) => {
     try {
       const { createdOrder, createdOrderItems } = await createOrder(formData);
@@ -29,6 +30,17 @@ export default function Page() {
       // Handle error (e.g., show error message to user)
     }
   };
+
+  if (cart.length === 0) {
+    return (
+      <div className="h-[70vh] flex flex-col items-center justify-center">
+        <p className="uppercase text-2xl mb-10 tracking-wider">
+          Your shopping cart is empty.
+        </p>
+        <Cta path="/">Continue Shopping</Cta>
+      </div>
+    );
+  }
 
   return (
     <div className="xl:px-36 md:px-24 px-12 pb-24 bg-primary-100">
