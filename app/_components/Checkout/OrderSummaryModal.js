@@ -7,7 +7,7 @@ export default async function OrderSummaryModal({ order, orderItems }) {
   const firstProduct = orderItems[0];
   const product = await getProduct(firstProduct.product_id);
   const otherItems = orderItems;
-  const otherItemsCount = 5;
+  const otherItemsCount = otherItems.length - 1;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex z-50 items-center justify-center">
