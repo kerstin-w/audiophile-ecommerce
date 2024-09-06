@@ -1,8 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/products/[slug]/page": "app/products/[slug]/page.js",
-  "/headphones/page": "app/headphones/page.js",
-  "/page": "app/page.js",
-  "/earphones/page": "app/earphones/page.js",
-  "/speakers/page": "app/speakers/page.js"
+  "/products/[slug]/page": "app/products/[slug]/page.js"
 }

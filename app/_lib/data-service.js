@@ -3,7 +3,6 @@ import { supabase } from './supabase';
 
 export async function getProduct(identifier) {
   let query;
-  console.log('supabase', supabase);
   if (typeof identifier === 'number') {
     query = supabase.from('products').select('*').eq('id', identifier).single();
   } else if (typeof identifier === 'string') {
