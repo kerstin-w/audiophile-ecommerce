@@ -21,7 +21,7 @@ function ZX9Callout() {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.{' '}
         </p>
-        <CtaBlack path="/">See Product</CtaBlack>
+        <CtaBlack path="/products/zx9-speaker">See Product</CtaBlack>
       </div>
     </div>
   );

@@ -8,7 +8,9 @@ function YX1Callout() {
         <h3 className="font-bold text-3xl leading-9 tracking-wide uppercase text-black mb-5">
           YX1 EARPHONES
         </h3>
-        <CtaTransparent path="/">See Product</CtaTransparent>
+        <CtaTransparent path="/products/yx1-earphones">
+          See Product
+        </CtaTransparent>
       </div>
     </div>
   );
