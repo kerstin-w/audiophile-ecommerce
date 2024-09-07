@@ -23,7 +23,7 @@ function AudiogearCallout() {
           alt="YX1 Earphones"
           fill={true}
           loading="lazy"
-          style={{ objectPosition: '50% 30%' }}
+          objectPosition="50% 30%"
           className="object-cover rounded-xl shadow-lg"
           placeholder="blur"
           blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
