@@ -18,6 +18,10 @@ function CategoryCallout() {
               width={200} // Adjust width as needed
               height={200} // Adjust height as needed
               className="object-contain"
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+                '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+              ).toString('base64')}`}
             />
           </div>
           <h3 className="text-base lg:text-[18px] font-bold tracking-wide uppercase pt-20 lg:pt-28">

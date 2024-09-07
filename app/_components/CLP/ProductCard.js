@@ -21,6 +21,10 @@ export default function ProductCard({ product, index }) {
           width={150}
           height={150}
           className="md:w-full w-auto md:h-auto h-44 rounded-lg"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+            '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+          ).toString('base64')}`}
         />
       </div>
       <div

@@ -18,18 +18,30 @@ function Recommendations({ product }) {
                 alt={product.name}
                 fill
                 className="object-cover hidden md:block lg:block rounded-lg"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+                  '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+                ).toString('base64')}`}
               />
               <Image
                 src={product.images.tablet}
                 alt={product.name}
                 fill
                 className="object-cover hidden md:block lg:hidden rounded-lg"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+                  '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+                ).toString('base64')}`}
               />
               <Image
                 src={product.images.mobile}
                 alt={product.name}
                 fill
                 className="object-cover block md:hidden lg:hidden rounded-lg"
+                placeholder="blur"
+                blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+                  '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+                ).toString('base64')}`}
               />
             </div>
             <div className="flex flex-col items-center mb-14 md:mb-0">

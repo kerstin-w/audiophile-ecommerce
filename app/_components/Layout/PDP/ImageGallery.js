@@ -15,6 +15,10 @@ function ImageGallery({ product }) {
             width={500}
             height={300}
             className="object-cover w-full lg:h-full h-[250px] rounded-lg"
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+              '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+            ).toString('base64')}`}
           />
         ))}
       </div>
@@ -26,6 +30,10 @@ function ImageGallery({ product }) {
             width={500}
             height={300}
             className="object-cover w-full h-full rounded-lg"
+            placeholder="blur"
+            blurDataURL={`data:image/svg+xml;base64,${Buffer.from(
+              '<svg width="1" height="1" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#F1F1F1"/></svg>'
+            ).toString('base64')}`}
           />
         </div>
       )}
